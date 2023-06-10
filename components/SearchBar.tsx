@@ -1,8 +1,10 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
+import {SearchManufacturer} from './'
 
 const SearchBar = () => {
-    const handleSeacrh = () => {
+    const [manufacturer, setManufacturer] = useState("")
+    const handleSearch = () => {
 
     }
 
@@ -10,7 +12,10 @@ const SearchBar = () => {
   return (
    <form className='searchbar' onSubmit={handleSearch}>
     <div className='searchbar__items'>
-        <SearchManufacturer  />
+        <SearchManufacturer 
+            manufacturer={manufacturer}
+            setManufacturer={setManufacturer}
+        />
     </div>
 
    </form>
