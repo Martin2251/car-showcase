@@ -1,3 +1,4 @@
+import { CarProps } from "@/types";
 
 export async function fetchCars() {
   const headers = {
@@ -31,3 +32,7 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
   
     return rentalRatePerDay.toFixed(0);
   };
+
+  export const generateCarImageURL = (car:CarProps, angle?:string) => {
+    
+  }
