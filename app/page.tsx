@@ -1,9 +1,10 @@
 import { CustomButton, CustomFilter, Hero, SearchBar,CarCard } from '@/components'
 import { manufacturers, yearsOfProduction, fuels } from '@/constants';
+import { HomeProps } from '@/types';
 import { fetchCars } from '@/utils';
 import Image from 'next/image'
 
-export default async function Home({searchParams}) {
+export default async function Home({searchParams}:HomeProps) {
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || '',
     year: searchParams.year  || '2022',

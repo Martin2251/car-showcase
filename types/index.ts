@@ -51,3 +51,7 @@ export interface CarProps {
     options:OptionProps[];
 
   }
+
+  export interface HomeProps {
+    searchParams: FilterProps;
+  }
